@@ -1,0 +1,35 @@
+'''start with 2 lists first and last names of funny names.
+load the 2 lists, short lists
+choose first name at random
+assign the name to a variable
+choose last name at random
+assign the name to a variable
+have it pair a first and last name together
+have it so user can easily repeat the process
+ask the user to quit or play again
+if user plays again:
+    repeat
+if user quits:
+    end and exit'''
+
+import sys 
+import random
+print("Welcome to the 'Silly Pet Names Generator.' \n")
+print("This is where all your confusion ends! \n" )
+
+first = ('Abigail', 'Ace', 'Adam','Addie','Admiral','Aggie','Aires','Aj','Jax','Aldo','Alex','Alexus','Alf','Alfie','Allie','Ally','Amber','Amie','Amigo','Amos','Amy','Andy','Angel','Angus','Annie','Apollo','April','Archie','Argus','Aries')
+
+last = ('Armanti','Arnie','Arrow','Ashes','Ashley','Astro','Atlas','Audi','Augie','Aussie','Austin','Autumn','Axel','Babe','Baby','Baby-doll','Babykins','Bacchus','Bailey','Bam-bam','Bandit','Banjo','Barbie','Barclay','Barker','Barkley','Barley','Barnaby','Barney','Baron','Bart','Basil','Baxter','Bb','Beamer','Beanie','Beans','Bear','Beau','Beauty','Beaux')
+while True:
+    firstName= random.choice(first)
+    lastName= random.choice(last)
+
+print("\n\n")
+print("{}{}".format(firstName,lastName))
+print("\n\n")
+
+try_again = input("Try again? (Press Enter else n to quit)\n").strip().lower()
+if try_again.lower() == "n":
+    bre
+input("\nPress Enter to exit")
+

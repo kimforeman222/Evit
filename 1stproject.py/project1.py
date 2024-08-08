@@ -7,10 +7,6 @@ Loop through each word in the word list:
     if word sorted is equal to user-word sorted:
             Append word to anagrams list
 Print anagrams list'''
-from ast import main
-from posixpath import split
-from typing import Counter
-import anagrams
 import load_dictionary
 
 word_list = load_dictionary.load('2of4brif.txt')
@@ -52,17 +48,20 @@ ini_name = input("Enter a name:")
 def find_anagrams(name, word_list):
         '''Red name and dictionary file and display all anagrams IN name.'''
         name_letter_map = Counter(word.lower())
+        for word in word_list:
+                test = ''
+                word_letter_map = Counter(word.lower())
         for letter in word:
                 if word_letter_map[letter]:
                         test += letter
-                        if Counter(test) == word_letter_map:
-                                find_anagrams.append(word)
+                elif Counter(test) == word_letter_map:
+                        find_anagrams.append(word)
 
 print(*find_anagrams, sep= '\n')
 print()
 print("Remaining letters = {}".format(name))
 print("Number of remaining letters = {}". format(len(name)))
-print("Number of remaining (real word) anagrams = {}".format(len(anagrams)))
+print("Number of remaining (real word) anagrams = {}".format(len(run)))
 
 def choice(name):
         """Check user choice for validity, return choice and leftover letters."""
@@ -96,13 +95,13 @@ running = True
 while running:
         temp_phrase = phrase.replace(' ', '')
         if len(temp_phrase) < limit:
-                print("Length of anagram phrase = {}".format(len(temp_phrase)))
+                print("Length of anagram phrase = {}".format(len()))
 
 find_anagrams(name, dict_file)
 print("Current anagram phrase =", end= " ")
 print(phrase, file=sys.stderr)
 
-choice, name = process_choice(name)
+
 phrase += choice + ' '
 
 if len(temp_phrase) == limit:
@@ -111,7 +110,7 @@ if len(temp_phrase) == limit:
         print(phrase, file=sys.stderr)
         print()
         try_again = input('\n\nTry again? (Press Enter else "n" to quit)\n')
-elif try_again.lower() == "n":
+if try_again.lower() == "n":
         running = False
         sys.exit()
 else:
