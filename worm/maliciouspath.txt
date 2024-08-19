@@ -1,0 +1,4 @@
+print("This will destroy your computer")
+print("Whether you like it or not...")
+print("This may be evil")
+print("Chances are you wont like this, maybe not:)")
